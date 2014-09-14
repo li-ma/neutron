@@ -327,7 +327,6 @@ class Dnsmasq(DhcpLocalProcess):
                             'DHCP AGENT MAY NOT RUN CORRECTLY! '
                             'Please ensure that its version is %s '
                             'or above!'), cls.MINIMUM_VERSION)
-                raise SystemExit(1)
         except (OSError, RuntimeError, IndexError, ValueError):
             LOG.error(_('Unable to determine dnsmasq version. '
                         'Please ensure that its version is %s '
